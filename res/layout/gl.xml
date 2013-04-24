@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<LinearLayout-->
+<!--android:orientation="vertical"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+
+<!--</LinearLayout>-->
+
+<com.example.ListViewAnimation.PageAnimationLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/targetViewGroup"
+        >
+    <!-- 动画的目标视图 -->
+    <Button
+            android:id="@+id/targetView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffc70c"
+            android:text="请点击"
+            android:alpha="0"
+            />
+</com.example.ListViewAnimation.PageAnimationLayout>
