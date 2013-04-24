@@ -32,7 +32,7 @@ public class MyActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.my);
 
-        ViewGroup rootView= (ViewGroup) findViewById(R.id.myRootView);
+        ViewGroup rootView = (ViewGroup) findViewById(R.id.myRootView);
 
         ListView listView = new ListView(this);
         listView.setAdapter(new MyListViewAdapter(this, 0, new ArrayList<String>() {
@@ -99,18 +99,18 @@ public class MyActivity extends Activity {
             TextView itemTextView = (TextView) view.findViewById(R.id.itemText);
             itemTextView.setText(getItem(position));
 
-            final View v=view;
+            final View v = view;
 
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    ViewGroup group= (ViewGroup) v.findViewById(R.id.itemContent);
-                    View.inflate(MyActivity.this, R.layout.gl, group);
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+            ViewGroup group = (ViewGroup) v.findViewById(R.id.itemContent);
+            View.inflate(MyActivity.this, R.layout.gl, group);
 //                    PageAnimationLayout pageAnimationLayout= (PageAnimationLayout) View.inflate(MyActivity.this, R.layout.gl, group);
-                    PageAnimationLayout pageAnimationLayout = (PageAnimationLayout) v.findViewById(R.id.targetViewGroup);
-                    pageAnimationLayout.start(100, 400);
-                }
-            }, 0);
+            PageAnimationLayout pageAnimationLayout = (PageAnimationLayout) v.findViewById(R.id.targetViewGroup);
+            pageAnimationLayout.start(100, 400);
+//                }
+//            }, 0);
 
 
             return view;

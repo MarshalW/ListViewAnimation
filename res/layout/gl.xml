@@ -18,7 +18,7 @@
         >
     <!-- 动画的目标视图 -->
     <Button
-            android:id="@+id/targetView"
+            android:id="@+id/targetView11"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="#ffc70c"
